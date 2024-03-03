@@ -3,15 +3,15 @@
         xmlns="http://ch.qos.logback/xml/ns/logback"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://ch,gos,logback/xml/ns/logbacklogback.xsd">
-    <appender name="STDOUT" class="ch.gos.logback.core.ConsoleAppender">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%date{HH:mm:ss}[%t]%logger -%m%n</pattern>
+            <pattern>%date{yyyy:MM:dd HH:mm:ss} [%t] %logger - %m%n</pattern>
         </encoder>
     </appender>
-    <logger name="c" level="debug" additivity="false">
+    <logger name="cityblue" level="debug" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
-    <root level="ERROR">
+    <root level="INFO">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>
